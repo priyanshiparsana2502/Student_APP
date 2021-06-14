@@ -1,0 +1,13 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+    <h2> {{ first_name }} {{ last_name }} </h2>
+    <h3> Topics </h3>
+    {% for topic in topics %}
+        <li> {{ topic }} </li>
+    {% endfor %}
+
+    <h3> Registered Courses </h3>
+    {% for course in courses %}
+        <li> {{ course }} </li>
+    {% endfor %}
+{% endblock %}

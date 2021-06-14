@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+{% block title %} Detail Page {% endblock %}
+{% block body_block %}
+    <h3>Topic Name: {{ top_list.name.upper}}</h3>
+    <h3>Length of the Course : {{ top_list.length }}</h3>
+{% if course_list %}
+ <h3>Courses associated with this topic:</h3>
+ <ol>
+ {% for course in course_list %}
+ <li> {{ course.title}} </li>
+ {% endfor %}
+ </ol>
+ {% else %}
+ <strong>There are no available courses for this topic!</strong>
+ {% endif %}
+{% endblock %}

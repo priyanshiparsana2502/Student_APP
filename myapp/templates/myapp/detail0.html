@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>E-Learning WebApp!</title>
+</head>
+<body>
+{% for top in topic %}
+    <h2>{{ top }} will take {{ top.length }} weeks to complete.</h2>
+{% endfor %}
+{% for course in course_list %}
+    <ol> {{ course.id }} : {{ course }} </ol>
+{% endfor %}
+<p><a href="/myapp">Back to Main Page</a></p>
+
+</body>
+</html>
